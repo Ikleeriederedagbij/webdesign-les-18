@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontdek Den Hoorn</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(afbeelding/achtergrond.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .facts-sidebar {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .facts-sidebar h2 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .facts-sidebar ul {
+            list-style-position: inside;
+            padding-left: 5px;
+        }
+
+        .facts-sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .content-main {
+            background-color: #eef2f7;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .attraction-card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 15px;
+        }
+
+        .attraction-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .attraction-text h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .attraction-img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            align-self: center;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                display: grid;
+                grid-template-columns: repeat(12, 100px); /* 12-koloms grid */
+                gap: 20px;
+            }
+
+            .facts-sidebar {
+                grid-column: span 2;
+            }
+
+            .content-main {
+                grid-column: span 9;
+            }
+
+            .attraction-card {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .attraction-text {
+                flex: 1;
+                padding-right: 20px;
+            }
+            .attraction-img {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Den Hoorn</h1>
+        <p>Midden-Delfland, Zuid-Holland</p>
+    </header>
+
+    <main>
+        <aside class="facts-sidebar">
+            <h2>Feitjes</h2>
+            <ul>
+                <li>Gelegen in de groene gemeente Midden-Delfland.</li>
+                <li>Heeft een rijke historie die teruggaat tot de middeleeuwen.</li>
+                <li>Bekend om de sfeervolle, monumentale Sint-Antoniuskerk.</li>
+                <li>Ligt direct tegen de grens van de historische stad Delft.</li>
+                <li>Omgeven door prachtige fiets- en wandelroutes door de polder.</li>
+            </ul>
+        </aside>
+
+        <section class="content-main">
+            
+            <div class="attraction-card">
+                <article class="attraction-text">
+                    <h3>De Sint-Antoniuskerk</h3>
+                    <p>De Sint-Antoniuskerk is een markant herkenningspunt in het centrum van Den Hoorn. Deze historische kerk combineert prachtige architectuur met een rustieke uitstraling en vormt al decennia het hart van de lokale gemeenschap.</p>
+                </article>
+                <img class="attraction-img" src="afbeelding/sintantonius.jpg" alt="Sint-Antoniuskerk Den Hoorn">
+            </div>
+
+            <div class="attraction-card">
+                <article class="attraction-text">
+                    <h3>De Polders net buiten Den Hoorn</h3>
+                    <p>Net buiten de dorpskern van Den Hoorn wandel je zo de uitgestrekte polders van Midden-Delfland in. Dit gebied is perfect voor recreanten die willen genieten van knotwilgen, weidevogels en historische vaarwegen.</p>
+                </article>
+                <img class="attraction-img" src="afbeelding/polders.jpg" alt="Polderlandschap Midden-Delfland">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Praktijk les 18. Gemaakt door ikleeriederedagbij</p>
+    </footer>
+
+</body>
+</html>
